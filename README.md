@@ -3,13 +3,13 @@
 A simple geolocation middleware for Express.js.
 
 
-NOTE: When using this module, we recommend also using the [i18n-express](https://github.com/koalazak/i18n-express) module, which use the `cookieLangName` session to set language translations. 
+NOTE: When using this module, we recommend also using the [i18n-express](https://github.com/koalazak/i18n-express) module, which use the `cookieLangName` session to set translations according that. 
 
 
 ## Requirements
 
   - Node >= 0.12
-  - Express.js
+  - Express.js session enabled
 
 ## Instalation
 
@@ -44,7 +44,6 @@ var bodyParser = require('body-parser');
 var i18n=require("i18n-express");
 var geolang=require("geolang-express");
 
-
 var indexRoutes = require('./routes/index');
 
 var app = express();
@@ -61,6 +60,7 @@ app.use(session({
 }));
 
 /*
+//Read documentation if you need to use
 app.use(i18n({
   translationsPath: path.join(__dirname, 'i18n'),
   siteLangs: ["en","es"],
@@ -81,12 +81,12 @@ module.exports = app;
 
 ```
 
-In your ejs view:
+Now in your ejs view you have `countryLang` and object with more data `countryData`:
 
 ```html
 <div>
 	
-	<p>Lang by Country IP set to: <%=countryLang%></p>
+	<p>Language by Country IP set to: <%=countryLang%></p>
 
 </div>
 ```
@@ -96,7 +96,7 @@ Or in your handlebars view:
 ```html
 <div>
 	
-	<p>Lang by Country IP set to: <%=countryLang%></p>
+	<p>Language by Country IP set to: <%=countryLang%></p>
 
 </div>
 ```
