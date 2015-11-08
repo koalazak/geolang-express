@@ -1,0 +1,35 @@
+{
+  "name": "geolang-express",
+  "version": "0.9.0",
+  "description": "A simple geolocation middleware for Express.js to set site lang by client IP.",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+   "dependencies": {
+    "geoip-lite": "*",
+    "country-data": "*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/koalazak/geolang-express.git"
+  },
+  "keywords": [
+    "geoip",
+    "express",
+    "i18n",
+    "language",
+    "geo",
+    "middleware",
+    "express.js",
+    "geolocation",
+    "web",
+    "site"
+  ],
+  "author": "Facu ZAK <zak.tux@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/koalazak/geolang-express/issues"
+  },
+  "homepage": "https://github.com/koalazak/geolang-express"
+}
