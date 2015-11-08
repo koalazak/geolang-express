@@ -1,7 +1,7 @@
 # geolang-express
 
-A simple geolocation middleware for Express.js.
-
+A simple geolocation middleware for Express.js. This module expose `countryLang` and object with more data `countryData` on app.locals making data visibles in views too.
+Also, set the session `cookieLangName` with the language of visitors country, useful for i18n modules.
 
 NOTE: When using this module, we recommend also using the [i18n-express](https://github.com/koalazak/i18n-express) module, which use the `cookieLangName` session to set translations according that. 
 
