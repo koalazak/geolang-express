@@ -6,3 +6,4 @@ node_js:
 install:
   - npm i -g jshint
   - npm i -g mocha
+  - npm install
