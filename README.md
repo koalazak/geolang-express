@@ -60,7 +60,7 @@ app.use(session({
 }));
 
 /*
-//Read documentation if you need to use
+//Read documentation if you need to use i18n
 app.use(i18n({
   translationsPath: path.join(__dirname, 'i18n'),
   siteLangs: ["en","es"],
