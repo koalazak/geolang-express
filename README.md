@@ -1,9 +1,12 @@
 # geolang-express
+[![Build Status](https://img.shields.io/travis/koalazak/geolang-express.svg)](https://travis-ci.org/koalazak/geolang-express)
+[![npm version](https://badge.fury.io/js/geolang-express.svg)](http://badge.fury.io/js/geolang-express)
+[![npm dependency status](https://david-dm.org/koalazak/geolang-express.png)](https://david-dm.org/koalazak/geolang-express)
 
 A simple geolocation middleware for Express.js. This module expose `countryLang` and object with more data `countryData` on app.locals making data visibles in views too.
 Also, set the session `cookieLangName` with the language of visitors country, useful for i18n modules.
 
-NOTE: When using this module, we recommend also using the [i18n-express](https://github.com/koalazak/i18n-express) module, which use the `cookieLangName` session to set translations according that. 
+NOTE: When using this module, we recommend also using the [i18n-express](https://github.com/koalazak/i18n-express) module, which use the `cookieLangName` session to set i18n translations according that value. 
 
 
 ## Requirements
@@ -59,19 +62,21 @@ app.use(session({
   resave: true
 }));
 
+
+app.use(geolang({
+  siteLangs: ["en","es"],
+  cookieLangName: 'ulang'
+}));
+
+
 /*
-//Read documentation if you need to use i18n
+//Read documentation if you need to use i18n-express package
 app.use(i18n({
   translationsPath: path.join(__dirname, 'i18n'),
   siteLangs: ["en","es"],
   cookieLangName: 'ulang'
 }));
 */
-
-app.use(geolang({
-  siteLangs: ["en","es"],
-  cookieLangName: 'ulang'
-}));
 
 
 app.use('/', indexRoutes);
