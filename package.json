@@ -8,7 +8,7 @@
     "test": "mocha"
   },
    "dependencies": {
-    "geoip-lite": "*",
+    "geoip-ultralight": "*",
     "country-data": "*"
   },
   "repository": {
